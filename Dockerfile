@@ -7,8 +7,8 @@ WORKDIR /app
 # Copy the project files to the container
 COPY . /app
 
-# Install dependencies
-RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
+# Install setuptools (to fix distutils issues) and dependencies
+RUN pip install --upgrade pip setuptools && pip install --no-cache-dir -r requirements.txt
 
 # Expose the port Flask runs on
 EXPOSE 5000
