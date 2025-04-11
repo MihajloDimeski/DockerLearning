@@ -1,0 +1,153 @@
+2025-04-07 13:01:20,409 - ERROR - Error loading home page: Could not build url for endpoint 'delete_user' with values ['user_id']. Did you mean 'delete' instead?
+Traceback (most recent call last):
+  File "/app/main.py", line 74, in index
+    return render_template("index.html", items=items)
+  File "/usr/local/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/index.html", line 37, in top-level template code
+    <a href="{{ url_for('delete_user', user_id=item.id) }}">Delete</a>
+    ^^^^^
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/usr/local/lib/python3.13/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'delete_user' with values ['user_id']. Did you mean 'delete' instead?
+2025-04-07 13:04:12,702 - INFO - Items table ensured at startup.
+2025-04-07 13:04:13,070 - INFO - Items table ensured at startup.
+2025-04-07 13:04:16,630 - INFO - 172.18.0.7 - GET /
+2025-04-07 13:04:16,631 - INFO - Accessed the home page.
+2025-04-07 13:04:16,691 - ERROR - Error loading home page: 'tuple object' has no attribute 'id'
+Traceback (most recent call last):
+  File "/app/main.py", line 74, in index
+    return render_template("index.html", items=items)
+  File "/usr/local/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/index.html", line 37, in top-level template code
+    <a href="{{ url_for('delete', id=item.id) }}">Delete</a>
+    ^^^^^
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/usr/local/lib/python3.13/site-packages/werkzeug/routing/map.py", line 922, in build
+    rv = self._partial_build(endpoint, values, method, append_unknown)
+  File "/usr/local/lib/python3.13/site-packages/werkzeug/routing/map.py", line 801, in _partial_build
+    rv = self._partial_build(
+        endpoint, values, self.default_method, append_unknown
+    )
+  File "/usr/local/lib/python3.13/site-packages/werkzeug/routing/map.py", line 814, in _partial_build
+    build_rv = rule.build(values, append_unknown)
+  File "/usr/local/lib/python3.13/site-packages/werkzeug/routing/rules.py", line 850, in build
+    return self._build_unknown(**values)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "<werkzeug routing>", line 1, in <builder:'/delete/<int:id>'>
+  File "/usr/local/lib/python3.13/site-packages/werkzeug/routing/converters.py", line 163, in to_url
+    value_str = str(self.num_convert(value))
+                    ~~~~~~~~~~~~~~~~^^^^^^^
+jinja2.exceptions.UndefinedError: 'tuple object' has no attribute 'id'
+2025-04-07 13:04:30,449 - INFO - 172.18.0.7 - GET /
+2025-04-07 13:04:30,462 - INFO - Accessed the home page.
+2025-04-07 13:04:30,534 - ERROR - Error loading home page: 'tuple object' has no attribute 'id'
+Traceback (most recent call last):
+  File "/app/main.py", line 74, in index
+    return render_template("index.html", items=items)
+  File "/usr/local/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/index.html", line 37, in top-level template code
+    <a href="{{ url_for('delete', id=item.id) }}">Delete</a>
+    ^^^^^
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/usr/local/lib/python3.13/site-packages/werkzeug/routing/map.py", line 922, in build
+    rv = self._partial_build(endpoint, values, method, append_unknown)
+  File "/usr/local/lib/python3.13/site-packages/werkzeug/routing/map.py", line 801, in _partial_build
+    rv = self._partial_build(
+        endpoint, values, self.default_method, append_unknown
+    )
+  File "/usr/local/lib/python3.13/site-packages/werkzeug/routing/map.py", line 814, in _partial_build
+    build_rv = rule.build(values, append_unknown)
+  File "/usr/local/lib/python3.13/site-packages/werkzeug/routing/rules.py", line 850, in build
+    return self._build_unknown(**values)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "<werkzeug routing>", line 1, in <builder:'/delete/<int:id>'>
+  File "/usr/local/lib/python3.13/site-packages/werkzeug/routing/converters.py", line 163, in to_url
+    value_str = str(self.num_convert(value))
+                    ~~~~~~~~~~~~~~~~^^^^^^^
+jinja2.exceptions.UndefinedError: 'tuple object' has no attribute 'id'
+2025-04-07 13:04:32,293 - INFO - 172.18.0.7 - GET /
+2025-04-07 13:04:32,294 - INFO - Accessed the home page.
+2025-04-07 13:04:32,303 - ERROR - Error loading home page: 'tuple object' has no attribute 'id'
+Traceback (most recent call last):
+  File "/app/main.py", line 74, in index
+    return render_template("index.html", items=items)
+  File "/usr/local/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/index.html", line 37, in top-level template code
+    <a href="{{ url_for('delete', id=item.id) }}">Delete</a>
+    ^^^^^
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/usr/local/lib/python3.13/site-packages/werkzeug/routing/map.py", line 922, in build
+    rv = self._partial_build(endpoint, values, method, append_unknown)
+  File "/usr/local/lib/python3.13/site-packages/werkzeug/routing/map.py", line 801, in _partial_build
+    rv = self._partial_build(
+        endpoint, values, self.default_method, append_unknown
+    )
+  File "/usr/local/lib/python3.13/site-packages/werkzeug/routing/map.py", line 814, in _partial_build
+    build_rv = rule.build(values, append_unknown)
+  File "/usr/local/lib/python3.13/site-packages/werkzeug/routing/rules.py", line 850, in build
+    return self._build_unknown(**values)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "<werkzeug routing>", line 1, in <builder:'/delete/<int:id>'>
+  File "/usr/local/lib/python3.13/site-packages/werkzeug/routing/converters.py", line 163, in to_url
+    value_str = str(self.num_convert(value))
+                    ~~~~~~~~~~~~~~~~^^^^^^^
+jinja2.exceptions.UndefinedError: 'tuple object' has no attribute 'id'
+2025-04-07 13:04:32,353 - INFO - 172.18.0.7 - GET /favicon.ico
+2025-04-07 13:04:34,743 - INFO - 172.18.0.7 - GET /
+2025-04-07 13:04:34,744 - INFO - Accessed the home page.

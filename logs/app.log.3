@@ -1,0 +1,163 @@
+2025-04-07 12:46:59,517 - ERROR - Error loading home page: Could not build url for endpoint 'delete_user' with values ['user_id']. Did you mean 'delete' instead?
+Traceback (most recent call last):
+  File "/app/main.py", line 55, in index
+    return render_template("index.html", items=items)
+  File "/usr/local/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/index.html", line 37, in top-level template code
+    <a href="{{ url_for('delete_user', user_id=item.id) }}">Delete</a>
+    ^^^^^
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/usr/local/lib/python3.13/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'delete_user' with values ['user_id']. Did you mean 'delete' instead?
+2025-04-07 12:46:59,905 - INFO - 172.18.0.7 - GET /
+2025-04-07 12:46:59,974 - INFO - Accessed the home page.
+2025-04-07 12:47:00,009 - ERROR - Error loading home page: Could not build url for endpoint 'delete_user' with values ['user_id']. Did you mean 'delete' instead?
+Traceback (most recent call last):
+  File "/app/main.py", line 55, in index
+    return render_template("index.html", items=items)
+  File "/usr/local/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/index.html", line 37, in top-level template code
+    <a href="{{ url_for('delete_user', user_id=item.id) }}">Delete</a>
+    ^^^^^
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/usr/local/lib/python3.13/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'delete_user' with values ['user_id']. Did you mean 'delete' instead?
+2025-04-07 12:48:28,896 - INFO - 172.18.0.7 - GET /
+2025-04-07 12:48:28,897 - INFO - Accessed the home page.
+2025-04-07 12:48:28,911 - ERROR - Error loading home page: Could not build url for endpoint 'delete_user' with values ['user_id']. Did you mean 'delete' instead?
+Traceback (most recent call last):
+  File "/app/main.py", line 55, in index
+    return render_template("index.html", items=items)
+  File "/usr/local/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/index.html", line 37, in top-level template code
+    <a href="{{ url_for('delete_user', user_id=item.id) }}">Delete</a>
+    ^^^^^
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/usr/local/lib/python3.13/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'delete_user' with values ['user_id']. Did you mean 'delete' instead?
+2025-04-07 12:48:43,860 - INFO - 172.18.0.7 - GET /home
+2025-04-07 12:49:20,021 - INFO - 172.18.0.7 - GET /index.html
+2025-04-07 12:49:30,743 - INFO - 172.18.0.7 - GET /imain
+2025-04-07 12:49:33,726 - INFO - 172.18.0.7 - GET /main
+2025-04-07 12:49:45,460 - INFO - 172.18.0.1 - GET /
+2025-04-07 12:49:45,463 - INFO - Accessed the home page.
+2025-04-07 12:49:45,470 - ERROR - Error loading home page: Could not build url for endpoint 'delete_user' with values ['user_id']. Did you mean 'delete' instead?
+Traceback (most recent call last):
+  File "/app/main.py", line 55, in index
+    return render_template("index.html", items=items)
+  File "/usr/local/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/index.html", line 37, in top-level template code
+    <a href="{{ url_for('delete_user', user_id=item.id) }}">Delete</a>
+    ^^^^^
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/usr/local/lib/python3.13/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'delete_user' with values ['user_id']. Did you mean 'delete' instead?
+2025-04-07 12:49:45,503 - INFO - 172.18.0.1 - GET /favicon.ico
+2025-04-07 12:54:43,729 - INFO - 172.18.0.7 - GET /
+2025-04-07 12:54:43,732 - INFO - Accessed the home page.
+2025-04-07 12:54:43,863 - ERROR - Error loading home page: Could not build url for endpoint 'delete_user' with values ['user_id']. Did you mean 'delete' instead?
+Traceback (most recent call last):
+  File "/app/main.py", line 55, in index
+    return render_template("index.html", items=items)
+  File "/usr/local/lib/python3.13/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/usr/local/lib/python3.13/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/usr/local/lib/python3.13/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/app/templates/index.html", line 37, in top-level template code
+    <a href="{{ url_for('delete_user', user_id=item.id) }}">Delete</a>
+    ^^^^^
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/flask/app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "/usr/local/lib/python3.13/site-packages/werkzeug/routing/map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'delete_user' with values ['user_id']. Did you mean 'delete' instead?
+2025-04-07 14:59:01,807 - INFO - 10.2.1.227 - GET /
+2025-04-07 14:59:01,808 - INFO - Accessed the home page.
+2025-04-07 14:59:06,044 - INFO - 10.2.1.227 - GET /favicon.ico
+2025-04-07 14:59:08,983 - INFO - 127.0.0.1 - GET /
+2025-04-07 14:59:08,983 - INFO - Accessed the home page.
+2025-04-07 14:59:13,179 - INFO - 127.0.0.1 - GET /favicon.ico
+2025-04-07 13:01:03,867 - INFO - Items table ensured at startup.
+2025-04-07 13:01:04,244 - INFO - Items table ensured at startup.
+2025-04-07 13:01:20,325 - INFO - 172.18.0.7 - GET /
+2025-04-07 13:01:20,337 - INFO - Accessed the home page.

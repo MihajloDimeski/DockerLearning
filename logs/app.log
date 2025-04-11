@@ -1,0 +1,7 @@
+2025-04-07 13:19:41,814 - INFO - Adding new item: Log Test
+2025-04-07 13:19:41,860 - INFO - 172.18.0.7 - GET /
+2025-04-07 13:19:41,862 - INFO - Accessed the home page.
+2025-04-07 13:20:32,548 - INFO - 172.18.0.7 - POST /add
+2025-04-07 13:20:32,549 - INFO - Adding new item: testtasrasd
+2025-04-07 13:20:32,564 - INFO - 172.18.0.7 - GET /
+2025-04-07 13:20:32,564 - INFO - Accessed the home page.
