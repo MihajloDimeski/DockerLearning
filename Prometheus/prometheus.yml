@@ -1,5 +1,5 @@
 global:
-  scrape_interval: 15s  # Set how often to scrape metrics from the services
+  scrape_interval: 5s  # Set how often to scrape metrics from the services
 
 scrape_configs:
   # Node Exporter (system metrics)
@@ -12,33 +12,33 @@ scrape_configs:
     static_configs:
       - targets: ['prometheus:9090']
 
-  # Flask CRUD App (Flask application metrics)
-  - job_name: 'flask-crud-app'
-    static_configs:
-      - targets: ['crud-app:5000']  # Assuming the Flask app exposes metrics on port 5000
+  # # Flask CRUD App (Flask application metrics) #Currently not working, probably should be deleted
+  # - job_name: 'flask-crud-app'
+  #   static_configs:
+  #     - targets: ['localhost:5000']  
 
-  # Elasticsearch (with Prometheus exporter)
-  - job_name: 'elasticsearch'
-    static_configs:
-      - targets: ['elasticsearch:9200']
+  # #Elastic Search
+  # - job_name: 'elasticsearch'
+  #   static_configs:
+  #     - targets: ['elasticsearch-exporter:9114']
 
-  # Logstash (if it exposes metrics via a Prometheus exporter)
-  - job_name: 'logstash'
-    static_configs:
-      - targets: ['logstash:9600']
+  # # Logstash (if it exposes metrics via a Prometheus exporter)
+  # - job_name: 'logstash'
+  #   static_configs:
+  #     - targets: ['logstash:9600']
 
-  # Grafana (metrics from Grafana itself)
-  - job_name: 'grafana'
-    static_configs:
-      - targets: ['grafana:3000']
+  # # Grafana (metrics from Grafana itself)
+  # - job_name: 'grafana'
+  #   static_configs:
+  #     - targets: ['grafana:3000']
 
   # cAdvisor (to monitor Docker containers)
   - job_name: 'cadvisor'
     static_configs:
       - targets: ['cadvisor:8080']
 
-  # Kibana (if it exposes metrics via a Prometheus exporter)
-  - job_name: 'kibana'
-    static_configs:
-      - targets: ['kibana:5601']
+  # # Kibana (if it exposes metrics via a Prometheus exporter)
+  # - job_name: 'kibana'
+  #   static_configs:
+  #     - targets: ['kibana:5601']
   
